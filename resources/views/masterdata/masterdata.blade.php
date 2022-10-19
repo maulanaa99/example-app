@@ -5,7 +5,7 @@
             <div class="btn-wrapper">
                 <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
                 <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
-                <a href="{{ route('masterdata.create') }}" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                <a href="{{ route('masterdata.create') }}" class="btn btn-primary text-white me-0"><i class="icon-plus"></i> Add</a>
             </div>
         </div>
     </div>
@@ -25,12 +25,9 @@
                 </tr>
             </thead>
             <tbody>
-                @php
-                    $no=1;
-                @endphp
                 @foreach ($masterdata as $row)
                 <tr>
-                    <td>{{ $no++ }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $row->part_number }}</td>
                     <td>{{ $row->part_name }}</td>
                     <td>{{ $row->katalis }}</td>

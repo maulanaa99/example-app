@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MasterdataController;
+use App\Models\MasterdataKensa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Route::get('/tes/asd', function () {
 });
 
 Route::resource('masterdata', MasterdataController::class);
+Route::resource('masterdatakensa', MasterdataKensa::class);
